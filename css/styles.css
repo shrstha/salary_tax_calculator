@@ -1,0 +1,20 @@
+.jumbotron{
+    height: 160px;
+}
+
+.card-title, .card-text{
+    text-align: center;
+}
+
+.card-title{
+    font-size: 1rem;
+}
+
+.card-text{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.control-label{
+    font-weight: 500;
+}

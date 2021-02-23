@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Salary Tax Calculator</title>
+        <link rel="stylesheet" href="css/styles.css"></link>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Salary Tax Calculator</h1>
+            <p>This tax calculator tool is designed as per the new salary tax which was announced during Budget Announcement of 2077/2078.</p>
+          </div>
+
+        <div class="container">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="marital-status">Marital Status</label>
+                    <div class="col-md-4">
+                        <select id="marital-status" name="marital-status" class="form-control">
+                        <option value="married">Married</option>
+                        <option value="unmarried">Unmarried</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="monthly-gross-salary">Salary</label>  
+                    <div class="col-md-4">
+                        <input id="monthly-gross-salary" name="monthly-gross-salary" type="number" placeholder="Enter monthly gross salary.." class="form-control" required="yes">
+                        <span class="help-block" data-toggle="tooltip" title="hey">Gross salary refers to the earning without tax</span>  
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button class="btn btn-info btn-sm" name="Calculate" type="button" onclick="calculateTax()">Calculate</button>
+                        <button class="btn btn-danger btn-sm" name="Reset" type="reset" id="reset" onclick="clearFields()">Reset</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-sm-3" >
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Gross Salary</h5>
+                            <p class="card-text" id="annual-gross-salary">0.0</p>
+                            <a href="#" class="btn btn-primary">How?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Taxable Income</h5>
+                            <p class="card-text" id="annual-taxable-income">0.0</p>
+                            <a href="#" class="btn btn-primary">How?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Annual Payable Tax</h5>
+                            <p class="card-text" id="annual-payable-tax">0.0</p>
+                            <a href="#" class="btn btn-primary">How?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Monthly Payable Tax</h5>
+                            <p class="card-text" id="monthly-payable-tax">0.0</p>
+                            <a href="#" class="btn btn-primary">How?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
