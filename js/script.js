@@ -1,3 +1,4 @@
+//Function to reset all the input & tax results fields
 function clearFields(){
     document.getElementById("annual-gross-salary").innerHTML = "0.00"
     document.getElementById("monthly-gross-salary").innerHTML = "0.00"
@@ -8,6 +9,7 @@ function clearFields(){
     document.getElementById("tax-slab").innerHTML = "0%"
 }
 
+//Function to validate the salary field. Takes only number from 0-9
 function checkDec(el){
     var ex = /^\d*[0-9]?\d*$/
     if(ex.test(el.value) == false){
@@ -15,6 +17,7 @@ function checkDec(el){
     }
 }
 
+//Function to calucate the tax
 function calculateTax(){
     let maritalStatus = document.getElementById("marital-status").value
     let monthlySalary = document.getElementById("mnthly-gross-salary").value
@@ -28,6 +31,7 @@ function calculateTax(){
     let monthlyCashInHandId = document.getElementById("monthly-cash-in-hand")
     let taxSlabId = document.getElementById("tax-slab")
 
+    //tax slab dictionary
     let slabs = {
         "slab1" : "1%",
         "slab2" : "10%",
@@ -41,6 +45,7 @@ function calculateTax(){
         alert("Get a job!")
         document.getElementById("monthly-gross-salary").innerHTML = "0.00"
     } else if (maritalStatus === "married") {
+        //tax calculation logic for unmarried people
         let slices = {
             "fs": (0.01 * annualGrossSalary),
             "ss": (0.01 * 450000) + (0.1 * (annualGrossSalary - 450000)),
@@ -82,6 +87,7 @@ function calculateTax(){
             taxSlabId.innerHTML = slabs['slab5']
         }
     } else if (maritalStatus === "unmarried") {
+        //tax calculation logic for unmarried people
         let slices = {
             "fs": (0.01 * annualGrossSalary),
             "ss": (0.01 * 400000) + (0.1 * (annualGrossSalary - 400000)),
