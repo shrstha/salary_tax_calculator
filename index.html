@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Salary Tax Calculator</title>
         <link rel="stylesheet" href="css/styles.css"></link>
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -27,7 +28,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="mnthly-gross-salary">Salary</label>  
                     <div class="col-md-4">
-                        <input id="mnthly-gross-salary" name="mnthly-gross-salary" type="number" placeholder="Enter monthly gross salary.." class="form-control" required="yes">
+                        <input id="mnthly-gross-salary" name="mnthly-gross-salary" type="text" onkeyup="checkDec(this)" placeholder="Enter monthly gross salary.." class="form-control" required="yes">
                         <span class="help-block" data-toggle="tooltip" title="hey">Gross salary refers to the earning without tax</span>  
                     </div>
                 </div>
@@ -45,10 +46,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Annual Gross Salary</h5>
-                            <p class="card-text" id="annual-gross-salary">0.0</p>
+                            <p class="card-text" id="annual-gross-salary">0.00</p>
                             <h5 class="card-title">Monthly Gross Salary</h5>
-                            <p class="card-text" id="monthly-gross-salary">0.0</p>
-                            <!-- <a href="#" class="btn btn-primary">How?</a> -->
+                            <p class="card-text" id="monthly-gross-salary">0.00</p>
                         </div>
                     </div>
                 </div>
@@ -57,10 +57,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Annual Payable Tax</h5>
-                            <p class="card-text" id="annual-payable-tax">0.0</p>
+                            <p class="card-text" id="annual-payable-tax">0.00</p>
                             <h5 class="card-title">Monthly Payable Tax</h5>
-                            <p class="card-text" id="monthly-payable-tax">0.0</p>
-                            <!-- <a href="#" class="btn btn-primary">How?</a> -->
+                            <p class="card-text" id="monthly-payable-tax">0.00</p>
                         </div>
                     </div>
                 </div>
@@ -69,10 +68,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Annual Cash in Hand</h5>
-                            <p class="card-text" id="annual-cash-in-hand">0.0</p>
+                            <p class="card-text" id="annual-cash-in-hand">0.00</p>
                             <h5 class="card-title">Monthly Cash in Hand</h5>
-                            <p class="card-text" id="monthly-cash-in-hand">0.0</p>
-                            <!-- <a href="#" class="btn btn-primary">How?</a> -->
+                            <p class="card-text" id="monthly-cash-in-hand">0.00</p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +80,6 @@
                         <div class="card-body">
                             <h5 class="card-title">Your tax slab is upto</h5>
                             <p class="card-text" id="tax-slab">0%</p>
-                            <!-- <a href="#" class="btn btn-primary">How?</a> -->
                         </div>
                     </div>
                 </div>
