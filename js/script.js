@@ -39,6 +39,7 @@ function calculateTax(){
     
     if (monthlySalary <= 0) {
         alert("Get a job!")
+        document.getElementById("monthly-gross-salary").innerHTML = "0.00"
     } else if (maritalStatus === "married") {
         let slices = {
             "fs": (0.01 * annualGrossSalary),

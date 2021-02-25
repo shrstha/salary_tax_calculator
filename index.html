@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="mnthly-gross-salary">Salary</label>  
                     <div class="col-md-4">
-                        <input id="mnthly-gross-salary" name="mnthly-gross-salary" type="text" onkeyup="checkDec(this)" placeholder="Enter monthly gross salary.." class="form-control" required="yes">
+                        <input id="mnthly-gross-salary" name="mnthly-gross-salary" type="text" onkeydown="clearFields()" onkeyup="checkDec(this)" placeholder="Enter monthly gross salary.." class="form-control" required="yes">
                         <span class="help-block" data-toggle="tooltip" title="hey">Gross salary refers to the earning without tax</span>  
                     </div>
                 </div>
