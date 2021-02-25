@@ -45,7 +45,7 @@ function calculateTax(){
         alert("Get a job!")
         document.getElementById("monthly-gross-salary").innerHTML = "0.00"
     } else if (maritalStatus === "married") {
-        //tax calculation logic for unmarried people
+        //tax calculation logic for married people
         let slices = {
             "fs": (0.01 * annualGrossSalary),
             "ss": (0.01 * 450000) + (0.1 * (annualGrossSalary - 450000)),
